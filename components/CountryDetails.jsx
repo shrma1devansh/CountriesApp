@@ -1,13 +1,14 @@
 import React from "react";
 import countriesData from "../CountriesData";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 export default function CountryDetail() {
   // const countryName = decodeURIComponent(
   //   new URLSearchParams(window.location.search).get("name"),
   // );
   const params = useParams();
-  console.log(params);
+  const lucky = useLocation();
+  console.log(lucky);
   const countryName = params.country;
   console.log(countryName);
   const country = countriesData.find(

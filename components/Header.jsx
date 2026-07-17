@@ -8,7 +8,13 @@ export default function Header() {
         {/* <h1> Devansh</h1>
         <h1> Devansh</h1>
         <h1> Devansh</h1> */}
-        <p className="theme-changer">
+        <p
+          className="theme-changer"
+          onClick={() => {
+            document.body.classList.toggle("dark");
+          }}
+        >
+          
           <i className="fa-regular fa-moon" />
           &nbsp;&nbsp;Dark Mode
         </p>
